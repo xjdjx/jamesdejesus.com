@@ -16,6 +16,7 @@ export default function Newest({
         </h3>
         <DateFormater dateString={date} />
         <p>{excerpt}</p>
+        <p><Link as={`/posts/${slug}`} href="/posts/[slug]">Read more...</Link></p>
       </section>
     )
 }

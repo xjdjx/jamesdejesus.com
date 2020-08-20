@@ -14,9 +14,7 @@ export default function Home({allPosts}) {
         <Col md={2} className={styles.left}>
           <p>Though most of the time I lead technology teams for a living, I also ride bikes and play in the snow.</p>
           <p>
-            <Link href="James_de_Jesus_2018_resume.pdf">Resume</Link><br />
-            <a href="https://www.linkedin.com/in/xjamesdejesusx/">LinkedIn</a><br />
-            <a href="https://www.strava.com/athletes/418775">Strava</a>
+            
           </p>
         </Col>
         <Col md={10} className={styles.main}>

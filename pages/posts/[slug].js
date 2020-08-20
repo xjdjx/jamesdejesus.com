@@ -14,11 +14,13 @@ export default function Post({post}){
 
     return (
         <Layout title={post.title}>
-            <h2>{post.title}</h2>
-            <DateFormater dateString={post.date} />
-            <p>{post.excerpt}</p>
-            <div dangerouslySetInnerHTML={{ __html: post.content }}/>
-            <Link href="/">home</Link>
+            <article>
+                <h2>{post.title}</h2>
+                <DateFormater dateString={post.date} />
+                <p>{post.excerpt}</p>
+                <div dangerouslySetInnerHTML={{ __html: post.content }}/>
+                <Link href="/">home</Link>
+            </article>
         </Layout>
     )
 }

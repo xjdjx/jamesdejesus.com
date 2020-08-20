@@ -13,3 +13,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+header { 
+  font-family: 'Roboto Slab', serif;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  width: 150px;
+}
