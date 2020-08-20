@@ -7,7 +7,7 @@ export default function Contact({}) {
   return (
     <Layout>
         <div className="form-group">
-            <form name="contact" method="POST" action="/success" netlify>
+            <form name="contact" method="POST" action="/pages/success" netlify>
                 <Row className="mb-3">
                     <Col md={2}><label for="name">Your Name:</label></Col>
                     <Col><input type="text" name="name" className="form-control" /></Col>
