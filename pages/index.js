@@ -12,7 +12,7 @@ export default function Home({allPosts}) {
     <Layout>
       <Row>
         <Col md={2} className={styles.left}>
-          <p>Cyclist and snowboarder, though most of the time I lead technology teams for a living.</p>
+          <p>Though most of the time I lead technology teams for a living, I also ride bikes and play in the snow.</p>
           <p>
             <Link href="James_de_Jesus_2018_resume.pdf">Resume</Link><br />
             <a href="https://www.linkedin.com/in/xjamesdejesusx/">LinkedIn</a><br />
