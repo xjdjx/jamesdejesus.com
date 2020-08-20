@@ -2,11 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Roboto', serif;
 }
 
 a {
-  color: inherit;
+  color: #007bff;
   text-decoration: none;
 }
 
