@@ -3,7 +3,6 @@ import Col from 'react-bootstrap/Col';
 import styles from '../styles/Home.module.css';
 import Excerpt from '../components/excerpt';
 import Layout from '../components/layout';
-import { getContentfulContent } from '../lib/getContentfulContent';
 import blogData from '../data/blogPost';
 
 export default function Home() {
@@ -31,10 +30,3 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps() {
-  const content = await getContentfulContent();
-
-  return {
-    props: { content },
-  }
-}
