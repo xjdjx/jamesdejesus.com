@@ -1,10 +1,14 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Link from 'next/link';
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import markdownToHtml from '../../lib/markdownToHtml'
 import Layout from '../../components/layout';
 import DateFormater from '../../components/date-formatter';
+import blogData from '../../data/blogPost';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+
+const allPosts = blogData.map((p) => {
+    return p.fields
+  })
 
 export default function Post({post}){
     const router = useRouter()
@@ -26,29 +30,25 @@ export default function Post({post}){
 }
 
 export async function getStaticProps({ params }) {
-    const post = getPostBySlug(params.slug, [
-        'title',
-        'date',
-        'slug',
-        'content',
-    ])
-    const content = await markdownToHtml(post.content || '')
-  
+    const currentPost = allPosts.find(post => {
+        return post.slug === params.slug;
+    });
+    
+    const content = documentToHtmlString(currentPost.body);
+
     return {
         props: {
             post: {
-                ...post,
+                ...currentPost,
                 content,
             },
         },
     }
 }
 
-export async function getStaticPaths() {
-    const posts = getAllPosts(['slug'])
-  
+export async function getStaticPaths() {  
     return {
-        paths: posts.map((post) => {
+        paths: allPosts.map((post) => {
             return {
                 params: {
                     slug: post.slug,
