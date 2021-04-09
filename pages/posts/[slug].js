@@ -23,7 +23,7 @@ export default function Post({post}){
                 <DateFormater dateString={post.date} />
                 <p>{post.excerpt}</p>
                 <div dangerouslySetInnerHTML={{ __html: post.content }}/>
-                <Link href="/">home</Link>
+                <Link href="/posts">All Posts</Link>
             </article>
         </Layout>
     )

@@ -20,7 +20,7 @@ export default function Header() {
                 <Col>
                     <ul className="nav">
                         <li><Link href="/posts"><a className="mr-2">All Posts</a></Link></li>
-                        <li><Link href="James_de_Jesus_2018_resume.pdf"><a className="mr-2">Resume</a></Link></li>
+                        <li><Link href="James_de_Jesus_2021_resume.pdf"><a className="mr-2">Resume</a></Link></li>
                         <li><a href="https://www.linkedin.com/in/xjamesdejesusx/" className="mr-2">LinkedIn</a></li>
                         <li><a href="https://www.strava.com/athletes/418775" className="mr-2">Strava</a></li>
                         <li><Link href="/contact"><a className="mr-2">Contact</a></Link><br /></li>
