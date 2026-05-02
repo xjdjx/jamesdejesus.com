@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -19,11 +20,11 @@ export default function Header() {
             <Row>
                 <Col>
                     <ul className="nav">
-                        <li><Link href="/posts"><a className="mr-2">All Posts</a></Link></li>
-                        <li><Link href="JDJ-2026-Resume.pdf"><a className="mr-2">Resume</a></Link></li>
+                        <li><Link href="/posts" className="mr-2">All Posts</Link></li>
+                        <li><Link href="/JDJ-2026-Resume.pdf" className="mr-2">Resume</Link></li>
                         <li><a href="https://www.linkedin.com/in/xjamesdejesusx/" className="mr-2">LinkedIn</a></li>
                         <li><a href="https://www.strava.com/athletes/418775" className="mr-2">Strava</a></li>
-                        <li><Link href="/contact"><a className="mr-2">Contact</a></Link><br /></li>
+                        <li><Link href="/contact" className="mr-2">Contact</Link><br /></li>
                     </ul>
                 </Col>
             </Row>

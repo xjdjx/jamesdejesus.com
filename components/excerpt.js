@@ -11,13 +11,11 @@ export default function Excerpt({
     return (
       <section className={styles.excerpt}>
         <h4>
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
-                <a className="hover:underline">{title}</a>
-            </Link>
+            <Link href={`/posts/${slug}`} className="hover:underline">{title}</Link>
         </h4>
         <DateFormater dateString={date} />
         <p>{excerpt}</p>
-        <p><Link as={`/posts/${slug}`} href="/posts/[slug]">Read more...</Link></p>
+        <p><Link href={`/posts/${slug}`}>Read more...</Link></p>
       </section>
     )
 }
