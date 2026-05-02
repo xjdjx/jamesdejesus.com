@@ -5,10 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "export": "npm run getcontent && npm run build",
-    "postinstall": "npm run getcontent",
-    "getcontent": "node lib/getContentfulContent.js"
+    "start": "next start"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^17.2.2",

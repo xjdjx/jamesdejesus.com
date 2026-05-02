@@ -1,15 +1,15 @@
 import styles from '../styles/Home.module.css'
 import Excerpt from '../components/excerpt'
 import Layout from '../components/layout'
-import blogData from '../data/blogPost'
+import { getAllPosts } from '../lib/contentful'
 
 export const metadata = {
   title: 'James de Jesus',
 }
 
-export default function Home() {
-  const allPosts = blogData.map((p) => p.fields)
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+export default async function Home() {
+  const allPosts = (await getAllPosts())
+    .sort((a, b) => (a.date > b.date ? -1 : 1))
 
   const newestPost = allPosts[0]
   return (
