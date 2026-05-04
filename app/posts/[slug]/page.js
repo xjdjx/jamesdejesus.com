@@ -4,7 +4,6 @@ import Layout from '../../../components/layout'
 import DateFormater from '../../../components/date-formatter'
 import { getAllPosts, getPostBySlug } from '../../../lib/contentful'
 
-export const dynamicParams = false
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
