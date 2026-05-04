@@ -8,7 +8,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <Layout>
-      <div className="form-group">
+      <div>
         <form name="contact" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
           <input type="hidden" name="redirect" value={`${process.env.NEXT_PUBLIC_SITE_URL}/success`} />

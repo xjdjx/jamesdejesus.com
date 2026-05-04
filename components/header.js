@@ -20,11 +20,11 @@ export default function Header() {
             <Row>
                 <Col>
                     <ul className="nav">
-                        <li><Link href="/posts" className="mr-2">All Posts</Link></li>
-                        <li><Link href="/JDJ-2026-Resume.pdf" className="mr-2">Resume</Link></li>
-                        <li><a href="https://www.linkedin.com/in/xjamesdejesusx/" className="mr-2">LinkedIn</a></li>
-                        <li><a href="https://www.strava.com/athletes/418775" className="mr-2">Strava</a></li>
-                        <li><Link href="/contact" className="mr-2">Contact</Link><br /></li>
+                        <li><Link href="/posts" className="me-2">All Posts</Link></li>
+                        <li><Link href="/JDJ-2026-Resume.pdf" className="me-2">Resume</Link></li>
+                        <li><a href="https://www.linkedin.com/in/xjamesdejesusx/" className="me-2">LinkedIn</a></li>
+                        <li><a href="https://www.strava.com/athletes/418775" className="me-2">Strava</a></li>
+                        <li><Link href="/contact" className="me-2">Contact</Link><br /></li>
                     </ul>
                 </Col>
             </Row>
