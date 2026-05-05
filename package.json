@@ -10,6 +10,8 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^17.2.2",
     "@contentful/rich-text-react-renderer": "^16.2.1",
+    "@contentful/rich-text-types": "^17",
+    "contentful": "^10",
     "bootstrap": "^5",
     "date-fns": "^2.15.0",
     "gray-matter": "^4.0.2",
