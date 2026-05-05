@@ -1,3 +1,4 @@
+import { draftMode } from 'next/headers'
 import styles from '../styles/Home.module.css'
 import Excerpt from '../components/excerpt'
 import Layout from '../components/layout'
@@ -8,7 +9,8 @@ export const metadata = {
 }
 
 export default async function Home() {
-  const allPosts = (await getAllPosts())
+  const { isEnabled } = await draftMode()
+  const allPosts = (await getAllPosts(isEnabled))
     .sort((a, b) => (a.date > b.date ? -1 : 1))
 
   const newestPost = allPosts[0]

@@ -1,3 +1,4 @@
+import { draftMode } from 'next/headers'
 import Layout from '../../components/layout'
 import Excerpt from '../../components/excerpt'
 import { getAllPosts } from '../../lib/contentful'
@@ -7,7 +8,8 @@ export const metadata = {
 }
 
 export default async function Posts() {
-  const allPosts = (await getAllPosts())
+  const { isEnabled } = await draftMode()
+  const allPosts = (await getAllPosts(isEnabled))
     .sort((a, b) => (a.date > b.date ? -1 : 1))
 
   return (

@@ -1,9 +1,9 @@
+import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Layout from '../../../components/layout'
 import DateFormater from '../../../components/date-formatter'
 import { getAllPosts, getPostBySlug } from '../../../lib/contentful'
-
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
@@ -23,7 +23,8 @@ export async function generateStaticParams() {
 
 export default async function Post({ params }) {
   const { slug } = await params
-  const post = await getPostBySlug(slug)
+  const { isEnabled } = await draftMode()
+  const post = await getPostBySlug(slug, isEnabled)
 
   if (!post) {
     notFound()
