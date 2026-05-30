@@ -12,6 +12,7 @@ export default function Contact() {
         <form name="contact" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
           <input type="hidden" name="redirect" value={`${process.env.NEXT_PUBLIC_SITE_URL}/success`} />
+          <input type="checkbox" name="botcheck" style={{ display: 'none' }} />
           <div className="row mb-3">
             <div className="col-md-2"><label htmlFor="name">Your Name:</label></div>
             <div className="col"><input type="text" name="name" className="form-control" /></div>
